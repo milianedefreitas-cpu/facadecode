@@ -1674,7 +1674,7 @@ suite('The agent panel in Chromium', function () {
 
 	test('PANEL-3.3: the overlay reveals on hover/scroll and fades while idle without taking width', async () => {
 		await call('Emulation.setDeviceMetricsOverride', { width: 400, height: 300, deviceScaleFactor: 1, mobile: false });
-		await evaluate(`document.documentElement.style.cssText = '--vscode-scrollbarSlider-background:#ff0000;--vscode-scrollbarSlider-hoverBackground:#00ff00;--vscode-scrollbarSlider-activeBackground:#0000ff'`);
+		await evaluate(`document.documentElement.style.cssText = '--vscode-scrollbarSlider-background:#ff0000;--vscode-scrollbarSlider-hoverBackground:#00ff00;--vscode-scrollbarSlider-activeBackground:#0000ff;--vscode-editor-background:#ffffff'`);
 		await call('Input.dispatchMouseEvent', { type: 'mouseMoved', x: 420, y: 310 });
 		await wait(900);
 		const bounds = () => evaluate(`({ gutter: innerWidth - document.documentElement.clientWidth, width: document.querySelector('.agent').getBoundingClientRect().width })`);
@@ -1714,7 +1714,7 @@ suite('The agent panel in Chromium', function () {
 
 	test('PANEL-3.3: dragging outside stays visible and releasing outside cannot leave the overlay stuck', async () => {
 		await call('Emulation.setDeviceMetricsOverride', { width: 400, height: 300, deviceScaleFactor: 1, mobile: false });
-		await evaluate(`document.documentElement.style.cssText = '--vscode-scrollbarSlider-background:#ff0000;--vscode-scrollbarSlider-hoverBackground:#00ff00;--vscode-scrollbarSlider-activeBackground:#0000ff'`);
+		await evaluate(`document.documentElement.style.cssText = '--vscode-scrollbarSlider-background:#ff0000;--vscode-scrollbarSlider-hoverBackground:#00ff00;--vscode-scrollbarSlider-activeBackground:#0000ff;--vscode-editor-background:#ffffff'`);
 		await call('Input.dispatchMouseEvent', { type: 'mouseMoved', x: 395, y: 10 });
 		await call('Input.dispatchMouseEvent', { type: 'mousePressed', x: 395, y: 10, button: 'left', clickCount: 1 });
 		await call('Input.dispatchMouseEvent', { type: 'mouseMoved', x: 420, y: 140, button: 'left', buttons: 1 });
