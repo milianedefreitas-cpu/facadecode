@@ -31,7 +31,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	background: transparent;
+	background: var(--vscode-editor-background, #ffffff);
 	color: var(--vscode-foreground);
 	font-family: var(--vscode-font-family);
 	font-size: var(--facade-body);
