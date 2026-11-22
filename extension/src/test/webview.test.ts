@@ -1636,7 +1636,7 @@ suite('The agent panel in Chromium', function () {
 			const vscode = document.createElement('style');
 			vscode.textContent = '@layer vscode-default { html { scrollbar-color: var(--vscode-scrollbarSlider-background) var(--vscode-editor-background); } ::-webkit-scrollbar { width: 10px; height: 10px; } ::-webkit-scrollbar-thumb { background-color: var(--vscode-scrollbarSlider-background); } }';
 			document.head.prepend(vscode);
-			document.documentElement.style.cssText = '--vscode-scrollbarSlider-background:#ff0000;--vscode-scrollbarSlider-hoverBackground:#00ff00;--vscode-scrollbarSlider-activeBackground:#0000ff;--vscode-editor-background:#ffff00';
+			document.documentElement.style.cssText = '--vscode-scrollbarSlider-background:#ff0000;--vscode-scrollbarSlider-hoverBackground:#00ff00;--vscode-scrollbarSlider-activeBackground:#0000ff;--vscode-editor-background:#ffffff';
 			window.cancelled = [];
 			window.addEventListener('wheel', event => window.cancelled.push(event.defaultPrevented));
 		})()`);
